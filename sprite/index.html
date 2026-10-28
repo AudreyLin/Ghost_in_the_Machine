@@ -197,7 +197,10 @@
       <label for="snippet">Paste a short JavaScript snippet</label>
       <textarea id="snippet" name="snippet" rows="7" spellcheck="false" placeholder="const name = input.value;"></textarea>
       <p class="hint">A clean snippet stays in the browser. A marked line is explained by Gemma on this computer.</p>
-      <button type="submit">Look at this</button>
+      <div class="actions">
+        <button type="submit">Look at this</button>
+        <button type="button" id="clear">Clear</button>
+      </div>
     </form>
     <section class="findings" id="findings" aria-label="Marked lines"></section>
     </div>

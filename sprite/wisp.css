@@ -453,8 +453,14 @@ h1 {
   font-size: 0.85rem;
 }
 
-.paste button {
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-top: 0.65rem;
+}
+
+.paste button {
   border: 1px solid transparent;
   background: var(--sheet);
   color: #2c2442;
@@ -463,6 +469,12 @@ h1 {
   font: inherit;
   font-size: 0.95rem;
   cursor: pointer;
+}
+
+.paste button[type="button"] {
+  background: rgba(255, 250, 244, 0.08);
+  color: var(--ink);
+  border-color: rgba(246, 240, 230, 0.22);
 }
 
 .findings {

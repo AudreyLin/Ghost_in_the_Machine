@@ -4,6 +4,7 @@ const buttons = document.querySelectorAll("[data-set]");
 const form = document.querySelector("#paste");
 const snippet = document.querySelector("#snippet");
 const findings = document.querySelector("#findings");
+const clear = document.querySelector("#clear");
 
 const lines = {
   idle: "I'm here. I'm fine. Mostly.",
@@ -149,6 +150,14 @@ for (const button of buttons) {
     setMood(button.dataset.set);
   });
 }
+
+clear.addEventListener("click", () => {
+  lookToken += 1;
+  snippet.value = "";
+  findings.replaceChildren();
+  setMood("idle");
+  snippet.focus();
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
