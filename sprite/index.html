@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ghost in the Machine: Wisp</title>
+  <link rel="stylesheet" href="wisp.css">
+</head>
+<body>
+  <main class="stage">
+    <div class="desk">
+    <div class="portrait">
+    <h1>Ghost in the Machine: Wisp</h1>
+    <div class="scene" data-mood="idle">
+      <div class="moon" aria-hidden="true"></div>
+      <div class="stars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="backlight" aria-hidden="true"></div>
+
+      <svg class="wisp" viewBox="0 0 400 500" role="img" aria-labelledby="wisp-title">
+        <title id="wisp-title">Wisp, a timid little ghost in a tall top hat and purple coat</title>
+
+        <g class="sparkles" aria-hidden="true">
+          <path class="spark" transform="translate(64 150)" d="M0-8 1.4-1.4 8 0 1.4 1.4 0 8-1.4 1.4-8 0-1.4-1.4Z"/>
+          <path class="spark spark-b" transform="translate(338 210)" d="M0-6 1.1-1.1 6 0 1.1 1.1 0 6-1.1 1.1-6 0-1.1-1.1Z"/>
+          <path class="spark spark-c" transform="translate(300 390)" d="M0-7 1.2-1.2 7 0 1.2 1.2 0 7-1.2 1.2-7 0-1.2-1.2Z"/>
+        </g>
+
+        <g class="floater">
+          <path class="hair hair-side" d="M132 188
+            C112 214 108 258 128 292
+            C142 258 152 214 160 192
+            Q146 176 132 188 Z"/>
+          <path class="hair hair-side" d="M268 188
+            C288 214 292 258 272 292
+            C258 258 248 214 240 192
+            Q254 176 268 188 Z"/>
+
+          <path class="coat" d="M148 286
+            C112 318 96 378 118 442
+            Q160 468 200 454
+            Q240 468 282 442
+            C304 378 288 318 252 286
+            L228 312
+            Q200 332 172 312
+            L148 286 Z"/>
+          <path class="coat-light" d="M176 318
+            Q200 348 224 318
+            L236 404
+            Q200 422 164 404 Z"/>
+
+          <g class="hat">
+            <path class="hat-crown" d="M154 172
+              C148 124 126 86 118 66
+              Q200 34 282 66
+              C274 86 252 124 246 172 Z"/>
+            <ellipse class="hat-top" cx="200" cy="64" rx="82" ry="18"/>
+            <g class="hat-spikes" aria-hidden="true">
+              <path d="M158 156 L168 118 L180 158 Z"/>
+              <path d="M186 154 L198 102 L212 156 Z"/>
+              <path d="M220 156 L232 98 L246 154 Z"/>
+              <path d="M252 158 L260 120 L272 160 Z"/>
+            </g>
+            <ellipse class="hat-band" cx="200" cy="158" rx="72" ry="14"/>
+            <ellipse class="hat-brim" cx="200" cy="172" rx="102" ry="18"/>
+          </g>
+
+          <ellipse class="face" cx="200" cy="220" rx="52" ry="48"/>
+          <path class="hair fringe" d="M158 178
+            Q178 198 198 176
+            Q214 194 242 178
+            Q220 168 200 166
+            Q180 168 158 178 Z"/>
+
+          <g class="face-features">
+            <g class="brow brow-left"><path d="M158 192 Q174 180 192 194"/></g>
+            <g class="brow brow-right"><path d="M208 194 Q226 180 242 192"/></g>
+
+            <g class="eye-open eye-left">
+              <ellipse class="sclera" cx="180" cy="214" rx="14" ry="16"/>
+              <g class="gaze">
+                <ellipse class="pupil" cx="182" cy="216" rx="7.2" ry="8.2"/>
+                <ellipse class="catch" cx="176" cy="208" rx="3" ry="3"/>
+              </g>
+            </g>
+            <g class="eye-open eye-right">
+              <ellipse class="sclera" cx="220" cy="214" rx="14" ry="16"/>
+              <g class="gaze">
+                <ellipse class="pupil" cx="218" cy="216" rx="7.2" ry="8.2"/>
+                <ellipse class="catch" cx="224" cy="208" rx="3" ry="3"/>
+              </g>
+            </g>
+
+            <path class="eye-shut eye-shut-left" d="M166 216 Q180 230 194 216"/>
+            <path class="eye-shut eye-shut-right" d="M206 216 Q220 230 234 216"/>
+
+            <ellipse class="nose" cx="192" cy="236" rx="3.2" ry="4.2"/>
+            <ellipse class="nose" cx="208" cy="236" rx="3.2" ry="4.2"/>
+
+            <ellipse class="blush blush-left" cx="156" cy="238" rx="9" ry="5.5"/>
+            <ellipse class="blush blush-right" cx="244" cy="238" rx="9" ry="5.5"/>
+
+            <path class="mouth mouth-shy" d="M180 252 v7 M190 250 v8 M200 249 v8 M210 250 v8 M220 252 v7"/>
+            <path class="mouth mouth-flat" d="M186 254 H214"/>
+            <path class="mouth mouth-smile" d="M176 238 v6 M190 246 v7 M200 252 v7 M210 246 v7 M224 238 v6"/>
+            <ellipse class="mouth mouth-open" cx="200" cy="256" rx="7" ry="8"/>
+          </g>
+
+          <g class="sweat" aria-hidden="true">
+            <path class="drop sweat-a" d="M262 196
+              C262 196 254 210 254 218
+              C254 226 270 226 270 218
+              C270 210 262 196 262 196 Z"/>
+            <path class="drop sweat-b" d="M278 220
+              C278 220 272 232 272 238
+              C272 244 286 244 286 238
+              C286 232 278 220 278 220 Z"/>
+          </g>
+
+          <path class="collar collar-left" d="M146 268 L176 318 L198 286 Z"/>
+          <path class="collar collar-right" d="M254 268 L224 318 L202 286 Z"/>
+          <path class="cravat-halo" d="M186 304
+            Q200 348 214 304
+            Q206 324 200 332
+            Q194 324 186 304 Z"/>
+          <path class="cravat" d="M186 304
+            Q200 348 214 304
+            Q206 324 200 332
+            Q194 324 186 304 Z"/>
+
+          <g class="pin" aria-hidden="true">
+            <ellipse cx="164" cy="336" rx="8" ry="9"/>
+            <ellipse class="pin-hole" cx="161" cy="334" rx="1.6" ry="2"/>
+            <ellipse class="pin-hole" cx="167" cy="334" rx="1.6" ry="2"/>
+          </g>
+
+          <g class="charm-hover" transform="translate(324 78)" aria-hidden="true">
+            <g class="orbit">
+              <g transform="translate(34 0)">
+                <g class="charm charm-right">
+                  <ellipse class="charm-face" cx="0" cy="0" rx="20" ry="22"/>
+                  <ellipse class="charm-hole" cx="-8" cy="-5" rx="4.6" ry="6"/>
+                  <ellipse class="charm-hole" cx="8" cy="-5" rx="4.6" ry="6"/>
+                  <path class="charm-lip" d="M-9 10 Q0 16 9 10"/>
+                  <path class="charm-stitch" d="M-10 7 l4.5 5.5 M-5.5 7 l-4.5 5.5 M-2 6 l4.5 6 M2.5 6 l-4.5 6 M5.5 7 l4.5 5.5 M10 7 l-4.5 5.5"/>
+                  <g transform="rotate(50)">
+                    <g class="charm-ring">
+                      <path class="mini-star" transform="translate(0 -36) scale(0.62)" d="M0-8 1.4-1.4 8 0 1.4 1.4 0 8-1.4 1.4-8 0-1.4-1.4Z"/>
+                      <path class="mini-star" transform="translate(31 18) scale(0.5)" d="M0-8 1.4-1.4 8 0 1.4 1.4 0 8-1.4 1.4-8 0-1.4-1.4Z"/>
+                      <path class="mini-star" transform="translate(-31 18) scale(0.55)" d="M0-8 1.4-1.4 8 0 1.4 1.4 0 8-1.4 1.4-8 0-1.4-1.4Z"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g transform="translate(-34 0)">
+                <g class="charm charm-left">
+                  <ellipse class="charm-face" cx="0" cy="0" rx="20" ry="22"/>
+                  <ellipse class="charm-hole" cx="-8" cy="-5" rx="4.6" ry="6"/>
+                  <ellipse class="charm-hole" cx="8" cy="-5" rx="4.6" ry="6"/>
+                  <path class="charm-lip" d="M-9 10 Q0 16 9 10"/>
+                  <path class="charm-stitch" d="M-10 7 l4.5 5.5 M-5.5 7 l-4.5 5.5 M-2 6 l4.5 6 M2.5 6 l-4.5 6 M5.5 7 l4.5 5.5 M10 7 l-4.5 5.5"/>
+                  <g class="charm-ring">
+                    <path class="mini-star" transform="translate(0 -36) scale(0.62)" d="M0-8 1.4-1.4 8 0 1.4 1.4 0 8-1.4 1.4-8 0-1.4-1.4Z"/>
+                    <path class="mini-star" transform="translate(31 18) scale(0.5)" d="M0-8 1.4-1.4 8 0 1.4 1.4 0 8-1.4 1.4-8 0-1.4-1.4Z"/>
+                    <path class="mini-star" transform="translate(-31 18) scale(0.55)" d="M0-8 1.4-1.4 8 0 1.4 1.4 0 8-1.4 1.4-8 0-1.4-1.4Z"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+
+      <div class="shadow" aria-hidden="true"></div>
+      <div class="fog" aria-hidden="true">
+        <span class="cloud cloud-back cloud-purple"></span>
+        <span class="cloud cloud-mid cloud-green"></span>
+        <span class="cloud cloud-front cloud-purple"></span>
+        <span class="cloud cloud-far cloud-green"></span>
+      </div>
+    </div>
+
+    <p class="line" id="line" aria-live="polite">I'm here. I'm fine. Mostly.</p>
+
+    <div class="moods" role="group" aria-label="Wisp's mood">
+      <button type="button" data-set="idle" aria-pressed="true">Idle</button>
+      <button type="button" data-set="reading" aria-pressed="false">Reading</button>
+      <button type="button" data-set="worried" aria-pressed="false">Worried</button>
+      <button type="button" data-set="relieved" aria-pressed="false">Relieved</button>
+    </div>
+    </div>
+
+    <div class="panel">
+    <p class="guide-link"><a href="about.html">Click Here to see what she does</a></p>
+    <form class="paste" id="paste">
+      <label for="snippet">Paste a short JavaScript snippet</label>
+      <textarea id="snippet" name="snippet" rows="7" spellcheck="false" placeholder="const name = input.value;"></textarea>
+      <p class="hint">A clean snippet stays in the browser. A marked line is explained by Gemma on this computer.</p>
+      <button type="submit">Look at this</button>
+    </form>
+    <section class="findings" id="findings" aria-label="Marked lines"></section>
+    </div>
+    </div>
+  </main>
+  <script src="wisp.js"></script>
+</body>
+</html>

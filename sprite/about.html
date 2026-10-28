@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Wisp does</title>
+  <link rel="stylesheet" href="wisp.css">
+</head>
+<body>
+  <main class="stage guide">
+    <p class="back"><a href="index.html">Back to Wisp</a></p>
+    <h1>What Wisp does</h1>
+    <p>Wisp is a timid ghost who looks at a short JavaScript snippet you paste. A check in the browser marks a few kinds of risky lines. Gemma, running on this computer, explains only those marked lines. A clean snippet never calls the model, and she does not invent a finding.</p>
+    <p>She looks at the text in the box. She does not scan a repository or a GitHub account.</p>
+
+    <h2>Look at a snippet</h2>
+    <ol>
+      <li>Paste a short JavaScript snippet.</li>
+      <li>Press <strong>Look at this</strong>.</li>
+      <li>She reads it in the browser. If nothing is marked, she looks relieved and the page says “Nothing marked.”</li>
+      <li>If a line is marked, she looks worried. The check writes the line, a safer rewrite, and a citation. Gemma then explains that line in her voice.</li>
+    </ol>
+    <p>An empty box leaves her idle. She says “Paste a snippet first.” The mood buttons change her face, and pressing one cancels a look that is still in progress.</p>
+
+    <h2>What she marks</h2>
+    <p>Four checks. Each one owns its safer line and its citation. Gemma does not choose a different fix. Comments are skipped, including a <code>//</code> comment, and <code>://</code> is left intact.</p>
+    <ul>
+      <li><strong>A string run as code.</strong> <code>eval(...)</code> or <code>new Function(...)</code>. Safer: <code>result = allowedAction(input);</code> Citation: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">MDN: eval</a>.</li>
+      <li><strong>Text turned into HTML.</strong> An assignment to <code>innerHTML</code>, or a call to <code>document.write</code> or <code>document.writeln</code>. Safer: <code>element.textContent = text;</code> Citation: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">MDN: Element.innerHTML</a>.</li>
+      <li><strong>A secret kept in the code.</strong> A name such as api key, secret, password, or token, with a quoted value at least 8 characters long. Placeholder values, such as example, changeme, or the word password, are left alone. Safer: <code>const apiKey = process.env.API_KEY;</code> Citation: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html">OWASP: Secrets Management Cheat Sheet</a>.</li>
+      <li><strong>A script loaded over plain HTTP.</strong> A script address that uses <code>http://</code>. Safer: that same line with <code>https://</code>. Citation: <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content">MDN: Mixed content</a>.</li>
+    </ul>
+
+    <h2>When Gemma speaks</h2>
+    <p>The page asks Ollama at <code>http://127.0.0.1:11434</code>. It tries <code>gemma4:e4b</code>, then <code>gemma4:e2b</code> if the first model is missing. The weights stay on this computer. Cloud tags are not used.</p>
+    <p>Gemma is asked to explain the marked line in two or three short sentences, to include that line’s citation URL, and to mention no other line number. She is also asked not to describe an attack, a payload, or a different fix.</p>
+    <p>Her reply stays on the page only when it includes that citation URL and every “line N” she names is a line the check marked. Otherwise the page says “Wisp kept the checker’s words.” If she does not answer, it says “Wisp kept the checker’s words. Gemma did not answer.” The safer line and the citation remain either way.</p>
+
+    <h2>If she cannot reach Gemma</h2>
+    <p>Ollama needs to be running on this computer, with one of those two models pulled. If the browser blocks the call, quit Ollama, set <code>OLLAMA_ORIGINS</code> to the origin of this page (<code>http://127.0.0.1:8772</code> for the local preview), and start Ollama again.</p>
+  </main>
+</body>
+</html>
