@@ -59,4 +59,4 @@ If the browser blocks the call, quit Ollama, set `OLLAMA_ORIGINS` to `http://127
 
 ## Demo
 
-Judges may not download the model. Record a short screen capture of a clean snippet and a marked one, and commit it as `demo/wisp.mp4` or link it here.
+[Wisp](https://youtu.be/ru0efFPEZzI)
