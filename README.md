@@ -60,3 +60,6 @@ If the browser blocks the call, quit Ollama, set `OLLAMA_ORIGINS` to `http://127
 ## Demo
 
 [Wisp](https://youtu.be/ru0efFPEZzI)
+
+## Dev Post
+[Dev.to: Wisp: A JavaScript Snippet Security Ghost in the Machine](https://youtu.be/ru0efFPEZzI)
